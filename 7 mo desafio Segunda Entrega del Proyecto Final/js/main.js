@@ -1,8 +1,8 @@
-//Desafío: Optimizando proyecto
-//tienda online de casa de guitarras
+//Desafío: Segunda Pre Entrega / eliminamos todos los prompt
+//Idea a tienda online de casa de guitarras
 //Definiremos los datos necesarios para comenzar
 
-//Creamos la estructura de los objetos
+//Creando la estructura de los objetos
 class Guitars{
     constructor (id, modelo, anio, precio, color, imagen){
         this.id = id;
@@ -17,20 +17,23 @@ class Guitars{
     };
   };
   //Construímos - función constructora Array
-//Construímos - función constructora Array
-const guitarra1 = new Guitars (1, "Fender Telecaster", 1951, 231700, "Blanco", "Multimedia/fender-telecaster-blanca.webp");
-const guitarra2 = new Guitars (2,"Fender Stratocaster", 1954, 431000, "Negro", "Multimedia/D_NQ_NP_2X_722920-MLA47694800899_092021-F.webp");
-const guitarra3 = new Guitars (3,"Gibson Les Paul", 1952, 3299000, "Blanco", "Multimedia/D_NQ_NP_2X_939758-MLA50724326100_072022-F.webp");
-const guitarra4 = new Guitars (4, "Gibson ES335", 1958, 5800000, "Blanco", "Multimedia/D_NQ_NP_976516-MLA49008372137_022022-O.webp");
-const guitarra5 = new Guitars (5, "Gibson Flying V", 1958, 3000000, "Negro", "Multimedia/D_NQ_NP_2X_819557-MLA44928054370_022021-F.webp");
-const guitarra6 = new Guitars (6, "Gibson Explorer", 1958, 3200000, "Negro", "Multimedia/D_NQ_NP_2X_997723-MLA48678524788_122021-F.webp");
-const guitarra7 = new Guitars (7, "Gibson SG", 1961, 1800000, "Blanco", "Multimedia/D_NQ_NP_2X_771269-MLA47683019700_092021-F.webp");
-const guitarra8 = new Guitars (8, "B. C. Rich Warlock", 1980, 700000, "Negro", "Multimedia/D_NQ_NP_2X_754736-MLA47778224525_102021-F.webp");
-const guitarra9 = new Guitars (9, "Ibanez RG Standard", 2005, 200000, "Blanco", "Multimedia/D_NQ_NP_2X_716817-MLA48052064633_102021-F.webp");
-//▼Creamos los nuevos Array
-let conjuntoGuitarras = []
+  const guitarra1 = new Guitars (1, "Fender Telecaster", 1951, 231700, "Blanco", "Multimedia/fender-telecaster-blanca.webp");
+  const guitarra2 = new Guitars (2,"Fender Stratocaster", 1954, 431000, "Negro", "Multimedia/D_NQ_NP_2X_722920-MLA47694800899_092021-F.webp");
+  const guitarra3 = new Guitars (3,"Gibson Les Paul", 1952, 3299000, "Blanco", "Multimedia/D_NQ_NP_2X_939758-MLA50724326100_072022-F.webp");
+  const guitarra4 = new Guitars (4, "Gibson ES335", 1958, 5800000, "Blanco", "Multimedia/D_NQ_NP_976516-MLA49008372137_022022-O.webp");
+  const guitarra5 = new Guitars (5, "Gibson Flying V", 1958, 3000000, "Negro", "Multimedia/D_NQ_NP_2X_819557-MLA44928054370_022021-F.webp");
+  const guitarra6 = new Guitars (6, "Gibson Explorer", 1958, 3200000, "Negro", "Multimedia/D_NQ_NP_2X_997723-MLA48678524788_122021-F.webp");
+  const guitarra7 = new Guitars (7, "Gibson SG", 1961, 1800000, "Blanco", "Multimedia/D_NQ_NP_2X_771269-MLA47683019700_092021-F.webp");
+  const guitarra8 = new Guitars (8, "B. C. Rich Warlock", 1980, 700000, "Negro", "Multimedia/D_NQ_NP_2X_754736-MLA47778224525_102021-F.webp");
+  const guitarra9 = new Guitars (9, "Ibanez RG Standard", 2005, 200000, "Blanco", "Multimedia/D_NQ_NP_2X_716817-MLA48052064633_102021-F.webp");
 
-//▼Elementos DOM 
+
+//const conjuntoGuitarras = [guitarra1, guitarra2, guitarra3, guitarra4, guitarra5, guitarra6, guitarra7, guitarra8, guitarra9]
+//Creamos los nuevos Array
+let conjuntoGuitarras = []
+let productosEnCarrito = []
+
+//Elementos DOM 
 let botonCarrito = document.getElementById("botonCarrito")
 let modalBody = document.getElementById("modal-body")
 let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
@@ -39,25 +42,25 @@ let acumulador
 let divProductos = document.getElementById("productos")
 divProductos.setAttribute("class", "productosEstilos")
 
-//▼Capturamos btn mostrar catalogo y pasamos eventos con function correspondiente
+//Capturamos btn mostrar catalogo y pasamos eventos con function correspondiente
 let mostrarCatalogoBtn = document.getElementById("verCatalogo")
 mostrarCatalogoBtn.addEventListener("click", mostrarCatalogo)
 
-//▼Capturamos btn ocultar catalogo y pasamos eventos con function correspondiente
+//Capturamos btn ocultar catalogo y pasamos eventos con function correspondiente
 let ocultarCatalogoBtn = document.getElementById("ocultarCatalogo")
 ocultarCatalogoBtn.onclick = ocultarCatalogo
 
-//▼Capturo guardarGuitarbtn y asignamos evento
+//Capturo guardarGuitarbtn boton y asignamos evento
 const guardarGuitarBtn = document.getElementById("guardarGuitarBtn")
 guardarGuitarBtn.addEventListener("click", guardarNuevaguitar)
 
-//▼Evento botonCarrito
+//Evento botonCarrito
 botonCarrito.addEventListener('click', () => {
     cargarProductosCarrito(productosEnCarrito)
 })
 //▼Eventos ▲Eventos ►Eventos◄
 
-//▼Inicio del array vacío
+//Inicio del array vacío
 if(localStorage.getItem("conjuntoGuitarras")){
 
     conjuntoGuitarras = JSON.parse(localStorage.getItem("conjuntoGuitarras"))
@@ -67,34 +70,14 @@ if(localStorage.getItem("conjuntoGuitarras")){
     conjuntoGuitarras.push(guitarra1, guitarra2, guitarra3, guitarra4, guitarra5, guitarra6, guitarra7, guitarra8, guitarra9)
     localStorage.setItem("conjuntoGuitarras", JSON.stringify(conjuntoGuitarras))
 }
-
-//▼Desestructurar Array 
-let [a, ,b , c] = conjuntoGuitarras
-a = "id: 1, modelo: Fender Telecaster, 1951, 231700, Blanco"
-console.log(a) //►imprime en consola el valor asignado en la línea anterior y reemplaza el original
-//►id 2 se declara vacío
-console.log(b) //►imprime en consola {id: 3, modelo: "Gibson Les Paul", anio: 1952, precio: 3299000, color: 'blanco', …}
-console.log(c) //►imprime en consola {id: 4, modelo: 'Gibson ES335', anio: 1958, precio: 5800000, color: 'blanco', …}
-console.log(conjuntoGuitarras) //►imprime en consola array ok
-console.log(...conjuntoGuitarras) //►imprime en consola array ok
-//▼Buscar por modelo ||▼Se aplica Operador Nullish
-let modeloBuscado = conjuntoGuitarras.find(guitarra => guitarra.modelo == "Gibson SG") ?? "No tenemos esa guitarra en stock"
-console.log(modeloBuscado) //►imprime según modelo buscado en consola {id: 7, modelo: 'Gibson SG', anio: 1961, precio: 1800000, color: 'blanco', …}
-
-//▼Se aplica Operador OR
-let productosEnCarrito = JSON.parse(localStorage.getItem("carrito")) || []
-
-//▼Desestructurar un objeto "juego1" ▼Se aplica Alias a "juego1A" ||▼Se aplica Operador AND - OR
-const {modelo, precio} = guitarra1
-const {modelo: modelo1, precio: precio1} = guitarra1
-let ComparaPrecio = precio
-if(ComparaPrecio == precio1){
-    console.log(`Estas guitarras valen lo mismo: ${precio}`)
+console.log(conjuntoGuitarras)
+//Inicio del array carrito
+if(localStorage.getItem("carrito")){
+    productosEnCarrito = JSON.parse(localStorage.getItem("carrito"))
 }else{
-    console.log(`Estas guitarras no valen lo mismo: ${modelo} vale ${precio} y ${modelo1} vale ${precio1}`)
-}
-ComparaPrecio > 10000 && console.log("Su producto es mayor a diez mil")
-console.log(ComparaPrecio || "El valor es 0 o no existe")
+    console.log(`primera vez`)
+    localStorage.setItem("carrito", [])
+} 
 
 //PLANTILLA DOM
 function mostrarCatalogo(){
@@ -107,7 +90,7 @@ function mostrarCatalogo(){
                                     <h3 class="card-title">${guitarra.modelo}</h3>
                                     <p class="">Color: ${guitarra.color}</p>
                                     <p class="card-text">Año: ${guitarra.anio}</p>
-                                    <p class="precioCard">Precio: ${guitarra.precio}</p>
+                                    <p class="">Precio: ${guitarra.precio}</p>
                                     <button id="agregarBtn${guitarra.id}" class="btn btn-primary click">Agregar al carrito</button>
                                     </article>` 
         divProductos.appendChild(nuevoProducto)
@@ -119,16 +102,16 @@ function mostrarCatalogo(){
 
     }
 
-    function agregarAlCarrito(guitarra){
-        console.log(`su Guitarra ${guitarra.modelo} color ${guitarra.color} ha sido agregado. N° id: ${guitarra.id}`)
-        productosEnCarrito.push(guitarra)
-        console.log(productosEnCarrito);
-        localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
-        //Seteo al storage
-    }
-    function ocultarCatalogo(){
-    divProductos.innerHTML =""
-    }
+function agregarAlCarrito(guitarra){
+    console.log(`su Guitarra ${guitarra.modelo} color ${guitarra.color} ha sido agregado. N° id: ${guitarra.id}`)
+    productosEnCarrito.push(guitarra)
+    console.log(productosEnCarrito);
+    localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
+    //Seteo al storage
+}
+function ocultarCatalogo(){
+divProductos.innerHTML =""
+}
 
 //Inputs  
 function guardarNuevaguitar(){
@@ -160,22 +143,25 @@ function cargarProductosCarrito(productosDelStorage) {
             </div>
     `
 })
-//▼Declaro función para calcular total ||▼Se aplica Spread ...
-compraTotal(...productosDelStorage)
+//Declaro función para calcular total
+compraTotal(productosDelStorage)
 }
 
-function compraTotal(...productosTotal) {
+function compraTotal(productosTotal) {
     acumulador = 0;
-    acumulador = productosTotal.reduce((acumulador, productoCarrito)=>{
-        return acumulador + productoCarrito.precio 
-    },0)
+    productosTotal.forEach((productoCarrito)=>{
+        acumulador += productoCarrito.precio 
+    })
     console.log(acumulador)
-
-//▼Se declara if para acumulador = 0 o != ||▼Se aplica Operador Ternario ? : 
-acumulador > 0 ? parrafoCompra.innerHTML = `El importe de su compra es ${acumulador}`: parrafoCompra.innerHTML = `<p>El carrito está vacío</p>`
+//Se declara if para acumulador = 0 o !=
+    if(acumulador == 0){
+        parrafoCompra.innerHTML = `<p>No hay productos en el carrito</p>`
+    }else{
+        parrafoCompra.innerHTML = `Importe de su compra ${acumulador}`
+    }
 }
 
-//▼Session Storage | ▼Aplico DarkMode
+//Session Storage | Aplico DarkMode
 let btnDarkMode = document.getElementById("botonDarkMode")
 let btnLightMode = document.getElementById("botonLightMode")
 
@@ -206,12 +192,4 @@ let eliminarModo = document.getElementById("eliminarMode")
 eliminarModo.addEventListener("click", ()=>{
     localStorage.removeItem("darkMode")
 })
-//▲Fin declaraciones 
-
-//▼DETALLES APLICADOS▼
-//►En línea 74 Desestructurar Array 
-//►En línea 83 Se aplica Operador Nullish
-//►En línea 87 Se aplica Operador OR
-//►En línea 90 a 100 Desestructurar un objeto "guitarra1" ||►Se aplica Operador AND - OR
-//►En línea 165 Se aplica Spread ...
-//►En línea 176 Se aplica Operador Ternario ? : 
+//Fin declaraciones

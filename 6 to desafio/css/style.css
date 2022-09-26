@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Estilos generales */
+
+html {
+    font-size: 62.5%; 
+}
+body{
+    color:black;
+    background-color: white;
+}
+  
+/* Estilos Index */
+header {
+    background-color: #1b5a87e2;
+}
+
+.titulo {
+    color: forestgreen;
+    font-size: 5em;
+    margin: 8rem;
+}
+.tituloDos {
+    color: #222347;
+    font-size: 2.5em;
+    margin: 8rem;
+}
+
+.productosEstilos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr)
+}
+.card img{
+    width: 80%;
+}
+.card {
+    align-items: center;
+    height: 100%;
+    margin: 2rem;
+    padding: 0.5rem;
+}
+
+.formUser {
+    margin: 2rem;
+    padding: 5rem;
+    font-size: 1.5em;
+}
+.darkMode {
+    color:blueviolet;
+    background-color: black;
+}
