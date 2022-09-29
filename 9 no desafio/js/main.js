@@ -339,7 +339,7 @@ eliminarModo.addEventListener("click", ()=>{
 //►En línea 74 Desestructurar Array 
 //►En línea 83 Se aplica Operador Nullish
 //►En línea 87 Se aplica Operador OR
-//►En línea 90 a 100 Desestructurar un objeto "juego1" ||►Se aplica Alias a "juego1A" ||►Se aplica Operador AND - OR
+//►En línea 90 a 100 Desestructurar un objeto |►Se aplica Operador AND - OR
 //►En línea 165 Se aplica Spread ...
 //►En línea 176 Se aplica Operador Ternario ? : 
 
