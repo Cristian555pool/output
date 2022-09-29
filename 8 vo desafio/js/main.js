@@ -84,7 +84,7 @@ console.log(modeloBuscado) //►imprime según modelo buscado en consola {id: 7,
 //▼Se aplica Operador OR
 let productosEnCarrito = JSON.parse(localStorage.getItem("carrito")) || []
 
-//▼Desestructurar un objeto "juego1" ▼Se aplica Alias a "juego1A" ||▼Se aplica Operador AND - OR
+//▼Desestructurar un objeto ▼Se aplica Operador AND - OR
 const {modelo, precio} = guitarra1
 const {modelo: modelo1, precio: precio1} = guitarra1
 let ComparaPrecio = precio
