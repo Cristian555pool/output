@@ -16,7 +16,7 @@ const cargarConjunto = async () =>{
     const response = await fetch("guitarras.json")
     const data = await response.json()
     for(let guitarra of data){
-                let guitarraNuevo = new Guitarras(guitarra.id, guitarra.modelo, guitarra.anio, guitarra.precio, guitarra.color, guitarra.imagen)
+                let guitarraNuevo = new Guitars(guitarra.id, guitarra.modelo, guitarra.anio, guitarra.precio, guitarra.color, guitarra.imagen)
                 conjuntoGuitarras.push(guitarraNuevo)
             }
 }

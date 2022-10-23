@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "modelo": "Fender Telecaster",
+        "anio": 1951,
+        "precio": 231700,
+        "color": "Blanco",
+        "imagen": "Multimedia/fender-telecaster-blanca.webp"
+    },
+    {
+        "id": 2,
+        "modelo": "Fender Stratocaster",
+        "anio": 1954,
+        "precio": 431000,
+        "color": "Negro",
+        "imagen": "Multimedia/D_NQ_NP_2X_722920-MLA47694800899_092021-F.webp"
+    },
+    {
+        "id": 3,
+        "modelo": "Gibson Les Paul",
+        "anio": 1952,
+        "precio": 3299000,
+        "color": "Blanco",
+        "imagen": "Multimedia/D_NQ_NP_2X_939758-MLA50724326100_072022-F.webp"
+    },
+    {
+        "id": 4,
+        "modelo": "Gibson ES335",
+        "anio": 1958,
+        "precio": 5800000,
+        "color": "Blanco",
+        "imagen": "Multimedia/D_NQ_NP_976516-MLA49008372137_022022-O.webp"
+    },
+    {
+        "id": 5,
+        "modelo": "Gibson Flying V",
+        "anio": 1958,
+        "precio": 3000000,
+        "color": "Negro",
+        "imagen": "Multimedia/D_NQ_NP_2X_819557-MLA44928054370_022021-F.webp"
+    },
+    {
+        "id": 6,
+        "modelo": "Gibson Explorer",
+        "anio": 1958,
+        "precio": 3200000,
+        "color": "Negro",
+        "imagen": "Multimedia/D_NQ_NP_2X_997723-MLA48678524788_122021-F.webp"
+    },
+    {
+        "id": 7,
+        "modelo": "Gibson SG",
+        "anio": 1961,
+        "precio": 1800000,
+        "color": "Blanco",
+        "imagen": "Multimedia/D_NQ_NP_2X_771269-MLA47683019700_092021-F.webp"
+    },
+    {
+        "id": 8,
+        "modelo": "B. C. Rich Warlock",
+        "anio": 1980,
+        "precio": 700000,
+        "color": "Negro",
+        "imagen": "Multimedia/D_NQ_NP_2X_754736-MLA47778224525_102021-F.webp"
+    },
+    {
+        "id": 9,
+        "modelo": "Ibanez RG Standard",
+        "anio": 2005,
+        "precio": 200000,
+        "color": "Blanco",
+        "imagen": "Multimedia/D_NQ_NP_2X_716817-MLA48052064633_102021-F.webp"
+    }
+    ]
